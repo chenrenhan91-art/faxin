@@ -32,14 +32,14 @@ export function ContactForm() {
     }
 
     setStatus("success");
-    setMessage("Thanks. A Kinopay teammate will get back to you shortly.");
+    setMessage("Thanks. A teammate from UuuPayUuu will get back to you shortly.");
     event.currentTarget.reset();
   }
 
   if (status === "success") {
     return (
-      <div className="flex min-h-[320px] flex-col justify-center bg-white px-8 py-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-        <h2 className="font-display text-[28px] text-ink">Message sent</h2>
+      <div className="flex min-h-[320px] flex-col justify-center rounded-3xl bg-white px-8 py-10 shadow-[0_16px_40px_rgba(28,18,12,0.08)]">
+        <h2 className="font-display text-[28px] font-semibold text-ink">Message sent</h2>
         <p className="mt-4 max-w-sm text-sm leading-6 text-heading">{message}</p>
       </div>
     );
@@ -49,10 +49,10 @@ export function ContactForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="bg-white px-8 py-10 shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
+      className="rounded-3xl bg-white px-8 py-10 shadow-[0_16px_40px_rgba(28,18,12,0.08)]"
       aria-label="Contact Form"
     >
-      <h2 className="font-display text-[28px] text-ink">Contact us</h2>
+      <h2 className="font-display text-[28px] font-semibold text-ink">Contact us</h2>
       <div className="mt-8 grid gap-8 sm:grid-cols-2">
         <Field label="First name" name="firstName" required autoComplete="given-name" />
         <Field label="Last name" name="lastName" autoComplete="family-name" />
@@ -68,7 +68,7 @@ export function ContactForm() {
           id="message"
           name="message"
           rows={5}
-          className="mt-2 w-full resize-y border-0 border-b border-ink bg-transparent py-2 text-ink outline-none focus:border-mint-deep"
+          className="mt-2 w-full resize-y border-0 border-b border-ink/30 bg-transparent py-2 text-ink outline-none focus:border-accent"
         />
       </div>
       {status === "error" ? (
@@ -78,7 +78,7 @@ export function ContactForm() {
       ) : null}
       <button
         type="submit"
-        className="mt-8 inline-flex h-11 w-full max-w-[160px] items-center justify-center rounded-full bg-ink text-sm text-white transition-colors duration-300 hover:bg-gold hover:text-ink active:scale-[0.98]"
+        className="mt-8 inline-flex h-11 w-full max-w-[160px] items-center justify-center rounded-full bg-accent text-sm font-semibold text-white transition-colors duration-300 hover:bg-ink active:scale-[0.98]"
       >
         Submit
       </button>
@@ -111,7 +111,7 @@ function Field({
         type={type}
         required={required}
         autoComplete={autoComplete}
-        className="mt-2 w-full border-0 border-b border-ink bg-transparent py-2 text-ink outline-none focus:border-mint-deep"
+        className="mt-2 w-full border-0 border-b border-ink/30 bg-transparent py-2 text-ink outline-none focus:border-accent"
       />
     </div>
   );
