@@ -1,6 +1,6 @@
 # UuuPayUuu
 
-Marketing site for UuuPayUuu. Live site: https://chenrenhan91-art.github.io/faxin/
+Marketing site for UuuPayUuu. Live site: http://uuupayuuu.com/
 
 ```bash
 npm run dev
